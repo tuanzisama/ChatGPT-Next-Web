@@ -6,7 +6,8 @@ RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+# COPY package.json yarn.lock ./
+COPY package.json ./
 
 # RUN yarn config set registry 'https://registry.npmmirror.com/'
 RUN yarn install --registry=https://registry.npmmirror.com --verbose
